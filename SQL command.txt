@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS `hotelbooking`.`booking_details`;
+CREATE TABLE `booking_details` (
+ `bookingrefno` bigint(20) NOT NULL,
+  `checkindate` datetime default NULL,
+  
+`checkoutdate` datetime default NULL,
+  `city` varchar(255) default NULL,
+  `hotelname` varchar(255) default NULL,
+  
+`rooms` int(11) NOT NULL,
+  PRIMARY KEY  (`bookingrefno`)
+);
+
+
+
+
+DROP TABLE IF EXISTS `hotelbooking`.`hibernate_sequence`;
+CREATE TABLE `hibernate_sequence` (
+`next_val` bigint(20) default NULL
+) ;
+
+
+
+DROP TABLE IF EXISTS `hotelbooking`.`hotelinfo`;
+CREATE TABLE `hotelinfo` (
+  `hotelid` int(10) unsigned NOT NULL auto_increment,
+  
+`hotelname` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `noofrooms` int(10) 
+unsigned NOT NULL,
+  `starrating` int(10) unsigned NOT NULL,
+  `amountperday` 
+int(10) unsigned NOT NULL,
+  PRIMARY KEY  (`hotelid`)
+);
